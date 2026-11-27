@@ -6,40 +6,89 @@
     <title>Dashboard de influencer</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <aside aria-label="Barra lateral">
-      <p>Sarah's Studio</p>
+  <body class="min-h-screen bg-slate-50 text-slate-900 lg:flex">
+    <aside aria-label="Barra lateral" class="flex flex-col gap-4 bg-slate-900 p-4 text-slate-100 lg:min-h-screen lg:w-64 lg:shrink-0 lg:gap-8 lg:p-6">
+      <p class="flex items-center gap-3 text-lg font-bold">
+        <span class="grid size-10 place-items-center rounded-xl bg-linear-to-br from-indigo-500 to-pink-500" aria-hidden="true">S</span>
+        Sarah's Studio
+      </p>
       <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="#" aria-current="page">Dashboard</a></li>
-          <li><a href="#">Campañas</a></li>
-          <li><a href="#">Contenido</a></li>
-          <li><a href="#">Finanzas</a></li>
+        <ul class="flex gap-2 overflow-x-auto lg:flex-col">
+          <li><a href="#" aria-current="page" class="block whitespace-nowrap rounded-lg bg-slate-800 px-3 py-2 font-medium text-white">Dashboard</a></li>
+          <li><a href="#" class="block whitespace-nowrap rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Campañas</a></li>
+          <li><a href="#" class="block whitespace-nowrap rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Contenido</a></li>
+          <li><a href="#" class="block whitespace-nowrap rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Finanzas</a></li>
         </ul>
       </nav>
-      <div>
-        <p>Sarah Molina</p>
-        <p>Creadora de contenido</p>
+      <div class="hidden items-center gap-3 border-t border-slate-800 pt-6 lg:flex">
+        <span class="grid size-10 place-items-center rounded-full bg-slate-700 font-semibold text-indigo-300" aria-hidden="true">SM</span>
+        <div>
+          <p class="font-semibold">Sarah Molina</p>
+          <p class="text-sm text-slate-400">Creadora de contenido</p>
+        </div>
       </div>
     </aside>
 
-    <div>
-      <header>
-        <h1>Mi dashboard de marca</h1>
-        <p>Seguimiento de comisiones, conversión y engagement por plataforma.</p>
+    <div class="min-w-0 flex-1 p-4 md:p-6 lg:p-10">
+      <header class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <button type="button">Descargar informe</button>
-          <button type="button">Nueva campaña</button>
+          <h1 class="text-2xl font-bold md:text-3xl">Mi dashboard de marca</h1>
+          <p class="mt-1 text-slate-500">Seguimiento de comisiones, conversión y engagement por plataforma.</p>
+        </div>
+        <div class="flex shrink-0 gap-3">
+          <button type="button" class="whitespace-nowrap rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Descargar informe</button>
+          <button type="button" class="whitespace-nowrap rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Nueva campaña</button>
         </div>
       </header>
 
-      <main>
+      <main class="mt-8 flex flex-col gap-8">
         <section aria-labelledby="kpis-title">
-          <h2 id="kpis-title">Indicadores principales</h2>
-          <article><h3>Comisiones totales</h3></article>
-          <article><h3>Ingresos por ventas</h3></article>
-          <article><h3>Tasa de conversión</h3></article>
-          <article><h3>Engagement medio</h3></article>
+          <h2 id="kpis-title" class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">Indicadores principales</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Comisiones totales</h3>
+                <span class="grid size-10 place-items-center rounded-xl bg-emerald-50 text-emerald-600" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                </span>
+              </div>
+              <p class="mt-3 text-2xl font-bold md:text-3xl">6.270 €</p>
+              <p class="mt-1 text-sm text-emerald-600"><span aria-hidden="true">↑</span> 12,5% vs mes anterior</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Ingresos por ventas</h3>
+                <span class="grid size-10 place-items-center rounded-xl bg-indigo-50 text-indigo-600" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z" /></svg>
+                </span>
+              </div>
+              <p class="mt-3 text-2xl font-bold md:text-3xl">41.800 €</p>
+              <p class="mt-1 text-sm text-slate-500">560 ventas en 3 productos</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Tasa de conversión</h3>
+                <span class="grid size-10 place-items-center rounded-xl bg-orange-50 text-orange-600" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
+                </span>
+              </div>
+              <p class="mt-3 text-2xl font-bold md:text-3xl">0,07%</p>
+              <p class="mt-1 text-sm text-red-600"><span aria-hidden="true">↓</span> 0,01 pp vs mes anterior</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Engagement medio</h3>
+                <span class="grid size-10 place-items-center rounded-xl bg-pink-50 text-pink-600" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>
+                </span>
+              </div>
+              <p class="mt-3 text-2xl font-bold md:text-3xl">7,8%</p>
+              <p class="mt-1 text-sm text-emerald-600"><span aria-hidden="true">↑</span> 2,1% vs mes anterior</p>
+            </article>
+          </div>
         </section>
 
         <section aria-labelledby="drivers-title">
@@ -54,6 +103,7 @@
 
           <article>
             <h3>Campañas recientes</h3>
+            <div class="overflow-x-auto">
             <table>
               <caption>Campañas recientes con su estado y resultado</caption>
               <thead>
@@ -69,10 +119,12 @@
               </thead>
               <tbody></tbody>
             </table>
+            </div>
           </article>
 
           <article>
             <h3>Plataformas</h3>
+            <div class="overflow-x-auto">
             <table>
               <caption>Métricas por plataforma</caption>
               <thead>
@@ -87,6 +139,7 @@
               </thead>
               <tbody></tbody>
             </table>
+            </div>
           </article>
 
           <article>
