@@ -6,10 +6,95 @@
     <title>Dashboard de influencer</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="min-h-screen bg-slate-900 text-slate-100">
-    <main class="p-6">
-      <h1 class="text-3xl font-bold text-indigo-400">Dashboard de influencer</h1>
-      <p class="mt-2 text-slate-300">Tailwind CSS v4 funcionando.</p>
-    </main>
+  <body>
+    <aside aria-label="Barra lateral">
+      <p>Sarah's Studio</p>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#" aria-current="page">Dashboard</a></li>
+          <li><a href="#">Campañas</a></li>
+          <li><a href="#">Contenido</a></li>
+          <li><a href="#">Finanzas</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p>Sarah Molina</p>
+        <p>Creadora de contenido</p>
+      </div>
+    </aside>
+
+    <div>
+      <header>
+        <h1>Mi dashboard de marca</h1>
+        <p>Seguimiento de comisiones, conversión y engagement por plataforma.</p>
+        <div>
+          <button type="button">Descargar informe</button>
+          <button type="button">Nueva campaña</button>
+        </div>
+      </header>
+
+      <main>
+        <section aria-labelledby="kpis-title">
+          <h2 id="kpis-title">Indicadores principales</h2>
+          <article><h3>Comisiones totales</h3></article>
+          <article><h3>Ingresos por ventas</h3></article>
+          <article><h3>Tasa de conversión</h3></article>
+          <article><h3>Engagement medio</h3></article>
+        </section>
+
+        <section aria-labelledby="drivers-title">
+          <h2 id="drivers-title">Drivers del resultado</h2>
+          <article><h3>Rendimiento por plataforma</h3></article>
+          <article><h3>Rendimiento por producto</h3></article>
+          <article><h3>Engagement por plataforma</h3></article>
+        </section>
+
+        <section aria-labelledby="ops-title">
+          <h2 id="ops-title">Detalle operacional</h2>
+
+          <article>
+            <h3>Campañas recientes</h3>
+            <table>
+              <caption>Campañas recientes con su estado y resultado</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Marca</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Fechas</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Ventas</th>
+                  <th scope="col">Comisión</th>
+                  <th scope="col">ROI</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </article>
+
+          <article>
+            <h3>Plataformas</h3>
+            <table>
+              <caption>Métricas por plataforma</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Plataforma</th>
+                  <th scope="col">Alcance</th>
+                  <th scope="col">Engagement</th>
+                  <th scope="col">Conversiones</th>
+                  <th scope="col">Coste</th>
+                  <th scope="col">ROI</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </article>
+
+          <article>
+            <h3>Alertas</h3>
+            <ul></ul>
+          </article>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
