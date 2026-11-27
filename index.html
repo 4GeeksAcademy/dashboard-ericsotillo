@@ -212,53 +212,143 @@
         </section>
 
         <section aria-labelledby="ops-title">
-          <h2 id="ops-title">Detalle operacional</h2>
+          <h2 id="ops-title" class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">Detalle operacional</h2>
+          <div class="grid grid-cols-1 gap-4 xl:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm xl:col-span-3">
+              <h3 class="font-semibold">Campañas recientes</h3>
+              <p class="mt-1 text-sm text-slate-500">Estado y resultado de cada colaboración</p>
+              <table class="mt-5 w-full text-left text-sm">
+                <caption class="sr-only">Campañas recientes con su estado y resultado</caption>
+                <thead class="hidden md:table-header-group">
+                  <tr>
+                    <th scope="col" class="border-b border-slate-200 py-3 pr-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Marca</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Producto</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Fechas</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Estado</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Ventas</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Comisión</th>
+                    <th scope="col" class="border-b border-slate-200 py-3 pl-3 text-xs font-semibold uppercase tracking-wide text-slate-500">ROI</th>
+                  </tr>
+                </thead>
+                <tbody class="flex flex-col gap-3 md:table-row-group">
+                  <tr class="block rounded-xl border border-slate-200 p-4 md:table-row md:rounded-none md:border-0 md:border-b md:border-slate-100 md:p-0 md:last:border-b-0">
+                    <th scope="row" class="block pb-2 font-semibold md:table-cell md:py-3 md:pr-3">Luxe Skincare<span class="block text-xs font-normal text-slate-500">Campaña de verano</span></th>
+                    <td data-label="Producto" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">Producto A</td>
+                    <td data-label="Fechas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span><time datetime="2026-06-01">1 jun</time> – <time datetime="2026-08-31">31 ago</time></span></td>
+                    <td data-label="Estado" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span class="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-700">Finalizada</span></td>
+                    <td data-label="Ventas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">180</td>
+                    <td data-label="Comisión" class="flex justify-between gap-4 py-1 font-semibold text-indigo-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">1.350 €</td>
+                    <td data-label="ROI" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:py-3 md:pl-3 md:before:hidden">4,5x</td>
+                  </tr>
+                  <tr class="block rounded-xl border border-slate-200 p-4 md:table-row md:rounded-none md:border-0 md:border-b md:border-slate-100 md:p-0 md:last:border-b-0">
+                    <th scope="row" class="block pb-2 font-semibold md:table-cell md:py-3 md:pr-3">Urban Apparel<span class="block text-xs font-normal text-slate-500">Colección de otoño</span></th>
+                    <td data-label="Producto" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">Producto B</td>
+                    <td data-label="Fechas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span><time datetime="2026-09-01">1 sep</time> – <time datetime="2026-11-30">30 nov</time></span></td>
+                    <td data-label="Estado" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span class="rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700">Activa</span></td>
+                    <td data-label="Ventas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">95</td>
+                    <td data-label="Comisión" class="flex justify-between gap-4 py-1 font-semibold text-indigo-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">1.710 €</td>
+                    <td data-label="ROI" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:py-3 md:pl-3 md:before:hidden">4,3x</td>
+                  </tr>
+                  <tr class="block rounded-xl border border-slate-200 p-4 md:table-row md:rounded-none md:border-0 md:border-b md:border-slate-100 md:p-0 md:last:border-b-0">
+                    <th scope="row" class="block pb-2 font-semibold md:table-cell md:py-3 md:pr-3">Tech Gadgets<span class="block text-xs font-normal text-slate-500">Review en vídeo</span></th>
+                    <td data-label="Producto" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">Producto C</td>
+                    <td data-label="Fechas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span><time datetime="2026-10-15">15 oct</time> – <time datetime="2026-12-15">15 dic</time></span></td>
+                    <td data-label="Estado" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span class="rounded-full bg-amber-50 px-2 py-0.5 text-xs font-semibold text-amber-700">Pausada</span></td>
+                    <td data-label="Ventas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">40</td>
+                    <td data-label="Comisión" class="flex justify-between gap-4 py-1 font-semibold text-indigo-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">480 €</td>
+                    <td data-label="ROI" class="flex justify-between gap-4 py-1 font-semibold text-red-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:py-3 md:pl-3 md:before:hidden">1,9x</td>
+                  </tr>
+                  <tr class="block rounded-xl border border-slate-200 p-4 md:table-row md:rounded-none md:border-0 md:border-b md:border-slate-100 md:p-0 md:last:border-b-0">
+                    <th scope="row" class="block pb-2 font-semibold md:table-cell md:py-3 md:pr-3">Glow Beauty<span class="block text-xs font-normal text-slate-500">Lanzamiento de invierno</span></th>
+                    <td data-label="Producto" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">Producto A</td>
+                    <td data-label="Fechas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span><time datetime="2026-11-01">1 nov</time> – <time datetime="2026-12-31">31 dic</time></span></td>
+                    <td data-label="Estado" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span class="rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700">Activa</span></td>
+                    <td data-label="Ventas" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">120</td>
+                    <td data-label="Comisión" class="flex justify-between gap-4 py-1 font-semibold text-indigo-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">900 €</td>
+                    <td data-label="ROI" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:py-3 md:pl-3 md:before:hidden">4,5x</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
 
-          <article>
-            <h3>Campañas recientes</h3>
-            <div class="overflow-x-auto">
-            <table>
-              <caption>Campañas recientes con su estado y resultado</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Marca</th>
-                  <th scope="col">Producto</th>
-                  <th scope="col">Fechas</th>
-                  <th scope="col">Estado</th>
-                  <th scope="col">Ventas</th>
-                  <th scope="col">Comisión</th>
-                  <th scope="col">ROI</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-            </div>
-          </article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm xl:col-span-2">
+              <h3 class="font-semibold">Plataformas</h3>
+              <p class="mt-1 text-sm text-slate-500">Mejor valor por métrica en verde</p>
+              <table class="mt-5 w-full text-left text-sm">
+                <caption class="sr-only">Métricas por plataforma</caption>
+                <thead class="hidden md:table-header-group">
+                  <tr>
+                    <th scope="col" class="border-b border-slate-200 py-3 pr-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Plataforma</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Alcance</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Engagement</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Conversiones</th>
+                    <th scope="col" class="border-b border-slate-200 p-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Coste</th>
+                    <th scope="col" class="border-b border-slate-200 py-3 pl-3 text-xs font-semibold uppercase tracking-wide text-slate-500">ROI</th>
+                  </tr>
+                </thead>
+                <tbody class="flex flex-col gap-3 md:table-row-group">
+                  <tr class="block rounded-xl border border-slate-200 p-4 md:table-row md:rounded-none md:border-0 md:border-b md:border-slate-100 md:p-0 md:last:border-b-0">
+                    <th scope="row" class="block pb-2 font-semibold md:table-cell md:py-3 md:pr-3"><span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-pink-500" aria-hidden="true"></span>Instagram</span></th>
+                    <td data-label="Alcance" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">250.000</td>
+                    <td data-label="Engagement" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">7,2%</td>
+                    <td data-label="Conversiones" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span>280<span class="sr-only"> (mejor)</span></span></td>
+                    <td data-label="Coste" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">900 €</td>
+                    <td data-label="ROI" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:py-3 md:pl-3 md:before:hidden"><span>3,5x<span class="sr-only"> (mejor)</span></span></td>
+                  </tr>
+                  <tr class="block rounded-xl border border-slate-200 p-4 md:table-row md:rounded-none md:border-0 md:border-b md:border-slate-100 md:p-0 md:last:border-b-0">
+                    <th scope="row" class="block pb-2 font-semibold md:table-cell md:py-3 md:pr-3"><span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-slate-900" aria-hidden="true"></span>TikTok</span></th>
+                    <td data-label="Alcance" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span>400.000<span class="sr-only"> (mejor)</span></span></td>
+                    <td data-label="Engagement" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden"><span>9,0%<span class="sr-only"> (mejor)</span></span></td>
+                    <td data-label="Conversiones" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">190</td>
+                    <td data-label="Coste" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">600 €</td>
+                    <td data-label="ROI" class="flex justify-between gap-4 py-1 font-semibold text-emerald-600 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:py-3 md:pl-3 md:before:hidden"><span>3,5x<span class="sr-only"> (mejor)</span></span></td>
+                  </tr>
+                  <tr class="block rounded-xl border border-slate-200 p-4 md:table-row md:rounded-none md:border-0 md:border-b md:border-slate-100 md:p-0 md:last:border-b-0">
+                    <th scope="row" class="block pb-2 font-semibold md:table-cell md:py-3 md:pr-3"><span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-red-600" aria-hidden="true"></span>YouTube</span></th>
+                    <td data-label="Alcance" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">120.000</td>
+                    <td data-label="Engagement" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">5,0%</td>
+                    <td data-label="Conversiones" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">90</td>
+                    <td data-label="Coste" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:p-3 md:before:hidden">500 €</td>
+                    <td data-label="ROI" class="flex justify-between gap-4 py-1 before:font-medium before:text-slate-500 before:content-[attr(data-label)] md:table-cell md:py-3 md:pl-3 md:before:hidden">2,0x</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
 
-          <article>
-            <h3>Plataformas</h3>
-            <div class="overflow-x-auto">
-            <table>
-              <caption>Métricas por plataforma</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Plataforma</th>
-                  <th scope="col">Alcance</th>
-                  <th scope="col">Engagement</th>
-                  <th scope="col">Conversiones</th>
-                  <th scope="col">Coste</th>
-                  <th scope="col">ROI</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-            </div>
-          </article>
-
-          <article>
-            <h3>Alertas</h3>
-            <ul></ul>
-          </article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 class="font-semibold">Alertas</h3>
+              <p class="mt-1 text-sm text-slate-500">Cambios que requieren atención</p>
+              <ul class="mt-5 flex flex-col gap-3">
+                <li class="flex gap-3 rounded-xl bg-red-50 p-3">
+                  <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-red-100 text-red-600" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6 9 12.75l4.286-4.286a11.948 11.948 0 0 1 4.306 6.43l.776 2.898m0 0 3.182-5.511m-3.182 5.51-5.511-3.181" /></svg>
+                  </span>
+                  <div class="text-sm">
+                    <p class="font-semibold text-red-900">Caída de conversión en YouTube</p>
+                    <p class="text-red-800">Bajó de 0,10% a 0,08% en los últimos 7 días.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3 rounded-xl bg-emerald-50 p-3">
+                  <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-emerald-100 text-emerald-600" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>
+                  </span>
+                  <div class="text-sm">
+                    <p class="font-semibold text-emerald-900">Pico de engagement en TikTok</p>
+                    <p class="text-emerald-800">+32% de interacciones tras el último reel del Producto B.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3 rounded-xl bg-amber-50 p-3">
+                  <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-amber-100 text-amber-600" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" /></svg>
+                  </span>
+                  <div class="text-sm">
+                    <p class="font-semibold text-amber-900">ROI bajo en Tech Gadgets</p>
+                    <p class="text-amber-800">1,9x, por debajo del objetivo de 3x. Campaña pausada.</p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
         </section>
       </main>
     </div>
