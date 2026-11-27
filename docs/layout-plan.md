@@ -35,15 +35,12 @@ Referencia visual: [reference/influencer-dashboard-reference.png](reference/infl
 +-----------+----------------------+----------------------+
 ```
 
-### Tablet (`md`)
+### Tablet (`md`) y móvil (base, desde 320 px)
 
-- Sidebar convertido en barra superior con la navegación en horizontal.
-- KPIs en 2 columnas; drivers en 1-2 columnas.
-
-### Móvil (base)
-
-- Barra superior con logo y navegación con scroll propio si no cabe.
-- Todo en 1 columna. Las tablas hacen scroll horizontal **dentro de su card**, nunca la página.
+- Barra superior con logo y menú hamburguesa sin JS: checkbox `sr-only` + `<label>` y `group-has-checked:block`.
+- El menú enlaza a las secciones: Resumen, Rendimiento, Campañas, Plataformas y Alertas.
+- KPIs: 1 columna (base), 2 (`sm`-`lg`), 4 (`xl`).
+- Tablas: por debajo de `md` cada fila es una mini-card (`data-label` + `before:content-[attr(data-label)]`); desde `md`, tabla normal. Sin scroll horizontal en ningún ancho.
 
 ## Bloques
 
