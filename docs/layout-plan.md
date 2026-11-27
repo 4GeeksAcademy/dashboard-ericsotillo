@@ -90,12 +90,20 @@ Referencia visual: [reference/influencer-dashboard-reference.png](reference/infl
 
 Comisión: 15% de cada venta.
 
-| Producto | Precio | Ventas | Ingresos | Comisión |
-|----------|--------|--------|----------|----------|
-| A | 50 € | 300 | 15.000 € | 2.250 € |
-| B | 120 € | 150 | 18.000 € | 2.700 € |
-| C | 80 € | 110 | 8.800 € | 1.320 € |
-| **Total** | | **560** | **41.800 €** | **6.270 €** |
+| Producto | Precio | Clics | Ventas | Conversión | Ingresos | Comisión |
+|----------|--------|-------|--------|------------|----------|----------|
+| A | 50 € | 5.770 | 300 | 5,2% | 15.000 € | 2.250 € |
+| B | 120 € | 3.660 | 150 | 4,1% | 18.000 € | 2.700 € |
+| C | 80 € | 2.900 | 110 | 3,8% | 8.800 € | 1.320 € |
+| **Total** | | **12.330** | **560** | **4,5%** | **41.800 €** | **6.270 €** |
+
+Conversión por producto = ventas / clics.
+
+| Plataforma | Me gusta | Comentarios | Compartidos | Guardados | Total |
+|------------|----------|-------------|-------------|-----------|-------|
+| Instagram | 14.200 | 1.600 | 1.200 | 1.000 | 18.000 |
+| TikTok | 29.500 | 2.900 | 2.600 | 1.000 | 36.000 |
+| YouTube | 4.900 | 650 | 300 | 150 | 6.000 |
 
 | Plataforma | Alcance | Interacciones | Engagement | Conversiones | Coste | Comisión | ROI |
 |------------|---------|---------------|-----------|--------------|-------|----------|-----|
