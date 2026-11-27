@@ -56,7 +56,7 @@
               <div class="flex items-start justify-between gap-3">
                 <h3 class="text-sm font-medium text-slate-500">Comisiones totales</h3>
                 <span class="grid size-10 place-items-center rounded-xl bg-emerald-50 text-emerald-600" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
                 </span>
               </div>
               <p class="mt-3 text-2xl font-bold md:text-3xl">6.270 €</p>
@@ -67,7 +67,7 @@
               <div class="flex items-start justify-between gap-3">
                 <h3 class="text-sm font-medium text-slate-500">Ingresos por ventas</h3>
                 <span class="grid size-10 place-items-center rounded-xl bg-indigo-50 text-indigo-600" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>
                 </span>
               </div>
               <p class="mt-3 text-2xl font-bold md:text-3xl">41.800 €</p>
@@ -99,10 +99,116 @@
         </section>
 
         <section aria-labelledby="drivers-title">
-          <h2 id="drivers-title">Drivers del resultado</h2>
-          <article><h3>Rendimiento por plataforma</h3></article>
-          <article><h3>Rendimiento por producto</h3></article>
-          <article><h3>Engagement por plataforma</h3></article>
+          <h2 id="drivers-title" class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">Drivers del resultado</h2>
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 class="font-semibold">Rendimiento por plataforma</h3>
+              <p class="mt-1 text-sm text-slate-500">Comisión generada y % del total</p>
+              <ul class="mt-5 flex flex-col gap-5">
+                <li>
+                  <div class="flex flex-wrap items-center justify-between gap-x-3 text-sm">
+                    <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-pink-500" aria-hidden="true"></span>Instagram</span>
+                    <span class="font-semibold">3.135 € (50%)</span>
+                  </div>
+                  <div class="mt-2 h-2 rounded-full bg-slate-100" aria-hidden="true"><div class="h-2 w-1/2 rounded-full bg-pink-500"></div></div>
+                </li>
+                <li>
+                  <div class="flex flex-wrap items-center justify-between gap-x-3 text-sm">
+                    <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-slate-900" aria-hidden="true"></span>TikTok</span>
+                    <span class="font-semibold">2.127 € (34%)</span>
+                  </div>
+                  <div class="mt-2 h-2 rounded-full bg-slate-100" aria-hidden="true"><div class="h-2 w-1/3 rounded-full bg-slate-900"></div></div>
+                </li>
+                <li>
+                  <div class="flex flex-wrap items-center justify-between gap-x-3 text-sm">
+                    <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-red-600" aria-hidden="true"></span>YouTube</span>
+                    <span class="font-semibold">1.008 € (16%)</span>
+                  </div>
+                  <div class="mt-2 h-2 rounded-full bg-slate-100" aria-hidden="true"><div class="h-2 w-1/6 rounded-full bg-red-600"></div></div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 class="font-semibold">Rendimiento por producto</h3>
+              <p class="mt-1 text-sm text-slate-500">Comisión generada y tasa de conversión (ventas / clics)</p>
+              <ul class="mt-5 divide-y divide-slate-100">
+                <li class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3 first:pt-0">
+                  <div>
+                    <p class="font-medium">Producto A</p>
+                    <p class="text-sm text-slate-500">50 € · 300 ventas</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-semibold">2.250 €</span>
+                    <span class="rounded-md bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700">5,2%</span>
+                  </div>
+                </li>
+                <li class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3">
+                  <div>
+                    <p class="font-medium">Producto B</p>
+                    <p class="text-sm text-slate-500">120 € · 150 ventas</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-semibold">2.700 €</span>
+                    <span class="rounded-md bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700">4,1%</span>
+                  </div>
+                </li>
+                <li class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3 last:pb-0">
+                  <div>
+                    <p class="font-medium">Producto C</p>
+                    <p class="text-sm text-slate-500">80 € · 110 ventas</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-semibold">1.320 €</span>
+                    <span class="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-700">3,8%</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-2">
+              <h3 class="font-semibold">Engagement por plataforma</h3>
+              <p class="mt-1 text-sm text-slate-500">Interacciones y engagement rate (interacciones / alcance)</p>
+              <div class="mt-5 grid grid-cols-1 divide-y divide-slate-100 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                <div class="py-4 first:pt-0 sm:px-4 sm:py-0 sm:first:pl-0">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="font-semibold text-pink-600">Instagram</h4>
+                    <span class="text-sm font-semibold text-emerald-600">7,2%</span>
+                  </div>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
+                    <div><dt class="text-slate-500">Me gusta</dt><dd class="font-semibold">14,2k</dd></div>
+                    <div><dt class="text-slate-500">Comentarios</dt><dd class="font-semibold">1,6k</dd></div>
+                    <div><dt class="text-slate-500">Compartidos</dt><dd class="font-semibold">1,2k</dd></div>
+                    <div><dt class="text-slate-500">Guardados</dt><dd class="font-semibold">1,0k</dd></div>
+                  </dl>
+                </div>
+                <div class="py-4 sm:px-4 sm:py-0">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="font-semibold text-slate-900">TikTok</h4>
+                    <span class="text-sm font-semibold text-emerald-600">9,0%</span>
+                  </div>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
+                    <div><dt class="text-slate-500">Me gusta</dt><dd class="font-semibold">29,5k</dd></div>
+                    <div><dt class="text-slate-500">Comentarios</dt><dd class="font-semibold">2,9k</dd></div>
+                    <div><dt class="text-slate-500">Compartidos</dt><dd class="font-semibold">2,6k</dd></div>
+                    <div><dt class="text-slate-500">Guardados</dt><dd class="font-semibold">1,0k</dd></div>
+                  </dl>
+                </div>
+                <div class="py-4 last:pb-0 sm:px-4 sm:py-0 sm:last:pr-0">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="font-semibold text-red-600">YouTube</h4>
+                    <span class="text-sm font-semibold text-red-600">5,0%</span>
+                  </div>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
+                    <div><dt class="text-slate-500">Me gusta</dt><dd class="font-semibold">4,9k</dd></div>
+                    <div><dt class="text-slate-500">Comentarios</dt><dd class="font-semibold">650</dd></div>
+                    <div><dt class="text-slate-500">Compartidos</dt><dd class="font-semibold">300</dd></div>
+                    <div><dt class="text-slate-500">Guardados</dt><dd class="font-semibold">150</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section aria-labelledby="ops-title">
