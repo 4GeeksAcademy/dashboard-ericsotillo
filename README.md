@@ -1,41 +1,57 @@
-# HTML Hello
+# Dashboard de influencer
 
-The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.
+Dashboard responsive para que una influencer consolide en un solo panel sus ventas, comisiones, conversión y engagement en Instagram, TikTok y YouTube. Los datos son de ejemplo.
 
-> There is a video tutorial on [how to use this template to create your very first website here](https://youtu.be/dfbDCMu_p-0).
+![Dashboard en escritorio](docs/screenshots/dashboard-desktop.png)
 
-## What to do next?
+<img src="docs/screenshots/dashboard-mobile.png" alt="Dashboard en móvil" width="280">
 
-Create an `index.html` file with the [basic HTML structure](http://4geeks.com/lesson/what-is-html-learn-html#page-structure) and see it live by running a web-server using the following command:
+## Qué muestra
+
+| Bloque | Contenido |
+|--------|-----------|
+| KPIs | Comisiones totales, ingresos por ventas, tasa de conversión, engagement medio |
+| Drivers | Rendimiento por plataforma y por producto, evolución mensual de comisiones, engagement por plataforma |
+| Detalle operacional | Tabla de campañas, tabla de plataformas, alertas y rankings filtrables |
+
+Contexto del negocio: 3 productos (A: 50 €, B: 120 €, C: 80 €) con una comisión del 15% por venta.
+
+## Tecnologías
+
+- HTML semántico.
+- [Tailwind CSS v4](https://tailwindcss.com) por CDN (`@tailwindcss/browser@4`).
+- [Charts.css](https://chartscss.org) 1.2.0 para el gráfico.
+- Sin JavaScript propio ni CSS personalizado.
+
+## Cómo verlo
+
+Abre `index.html` en el navegador, o levanta el servidor local:
 
 ```bash
-$ pip3 install flask && python3 server.py
+uv run --with flask server.py
 ```
 
-- You can create as many HTML files as you want.
-- You can also create CSS files and import them into your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+y entra en http://localhost:3000.
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
+## Decisiones técnicas
+
+- **Mobile-first desde 320 px**, sin scroll horizontal en ningún ancho.
+- **Menú hamburguesa sin JS:** checkbox `sr-only` + `<label>` y `group-has-checked:block`. Los enlaces llevan a cada sección.
+- **Tablas responsivas:** por debajo de `md` cada fila se muestra como tarjeta (`before:content-[attr(data-label)]`); desde `md`, tabla normal.
+- **Rankings filtrables sin JS:** radio buttons con estilo de pestaña y `group-has-[#id:checked]:block`.
+- **Charts.css + Tailwind v4:** Charts.css no usa `@layer` y sus reglas ganan a las utilidades de Tailwind. El alto se controla con su variable `--aspect-ratio`.
+- **Accesibilidad:** contraste WCAG AA en reposo y en hover, foco visible y HTML válido en el validador W3C.
+
+## Estructura
+
+```
+index.html              dashboard
+docs/layout-plan.md     plan de layout, componentes y datos de ejemplo
+docs/reference/         diseño de referencia
+docs/screenshots/       capturas del README
+server.py               servidor local de la plantilla
 ```
 
-- If you want to use Tailwind CSS, add it optionally via the official Tailwind CSS v4 CDN inside the same `<head>`:
+---
 
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
-
-### Contributors
-
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/html-hello/graphs/contributors).
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
+Basado en la plantilla [html-hello](https://github.com/4GeeksAcademy/html-hello) de 4Geeks Academy.
