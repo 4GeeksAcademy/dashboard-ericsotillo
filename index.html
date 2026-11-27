@@ -7,20 +7,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="min-h-screen bg-slate-50 text-slate-900 lg:flex">
-    <aside aria-label="Barra lateral" class="flex flex-col gap-4 bg-slate-900 p-4 text-slate-100 lg:min-h-screen lg:w-64 lg:shrink-0 lg:gap-8 lg:p-6">
-      <p class="flex items-center gap-3 text-lg font-bold">
-        <span class="grid size-10 place-items-center rounded-xl bg-linear-to-br from-indigo-500 to-pink-500" aria-hidden="true">S</span>
-        Sarah's Studio
-      </p>
-      <nav aria-label="Navegación principal">
-        <ul class="flex gap-2 overflow-x-auto lg:flex-col">
-          <li><a href="#" aria-current="page" class="block whitespace-nowrap rounded-lg bg-slate-800 px-3 py-2 font-medium text-white">Dashboard</a></li>
-          <li><a href="#" class="block whitespace-nowrap rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Campañas</a></li>
-          <li><a href="#" class="block whitespace-nowrap rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Contenido</a></li>
-          <li><a href="#" class="block whitespace-nowrap rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Finanzas</a></li>
+    <aside aria-label="Barra lateral" class="group flex flex-col gap-4 bg-slate-900 p-4 text-slate-100 lg:min-h-screen lg:w-64 lg:shrink-0 lg:gap-8 lg:p-6">
+      <div class="flex items-center justify-between gap-3">
+        <p class="flex items-center gap-3 text-lg font-bold">
+          <span class="grid size-10 place-items-center rounded-xl bg-linear-to-br from-indigo-500 to-pink-500" aria-hidden="true">S</span>
+          Sarah's Studio
+        </p>
+        <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+        <label for="menu-toggle" class="grid size-10 cursor-pointer place-items-center rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-indigo-400 lg:hidden">
+          <span class="sr-only">Mostrar u ocultar menú</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+        </label>
+      </div>
+      <nav aria-label="Navegación principal" class="hidden group-has-checked:block lg:block">
+        <ul class="flex flex-col gap-1">
+          <li><a href="#" aria-current="page" class="block rounded-lg bg-slate-800 px-3 py-2 font-medium text-white">Dashboard</a></li>
+          <li><a href="#" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Campañas</a></li>
+          <li><a href="#" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Contenido</a></li>
+          <li><a href="#" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Finanzas</a></li>
         </ul>
       </nav>
-      <div class="hidden items-center gap-3 border-t border-slate-800 pt-6 lg:flex">
+      <div class="hidden items-center gap-3 border-t border-slate-800 pt-4 group-has-checked:flex lg:flex lg:pt-6">
         <span class="grid size-10 place-items-center rounded-full bg-slate-700 font-semibold text-indigo-300" aria-hidden="true">SM</span>
         <div>
           <p class="font-semibold">Sarah Molina</p>
@@ -35,7 +42,7 @@
           <h1 class="text-2xl font-bold md:text-3xl">Mi dashboard de marca</h1>
           <p class="mt-1 text-slate-500">Seguimiento de comisiones, conversión y engagement por plataforma.</p>
         </div>
-        <div class="flex shrink-0 gap-3">
+        <div class="flex flex-wrap gap-3 sm:shrink-0">
           <button type="button" class="whitespace-nowrap rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Descargar informe</button>
           <button type="button" class="whitespace-nowrap rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Nueva campaña</button>
         </div>
